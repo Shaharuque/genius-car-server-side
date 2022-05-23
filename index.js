@@ -65,8 +65,8 @@ async function run() {
     //getting single service using id(find a document)
     app.get('/service/:id', async (req, res) => {
       const serviceid = req.params.id
-      //ai query ar opor base korei next a data get hobey
-      const query = { _id: ObjectId(serviceid) }
+      //ai query ar opor base korei next a data get hobey 
+      const query = { _id: ObjectId(serviceid) } //ai query ar meaning holo database ar _id and request id jodi miley shei service khujey ber korbey
       //remember jehotu ekta korey item find korbo tai cursor use kora lagbey na
       const service = await serviceCollection.findOne(query) //query ar moddhey id given so oi id basis a ek ekta korey service serviceCollection thekey niye ashbey
       res.send(service)
